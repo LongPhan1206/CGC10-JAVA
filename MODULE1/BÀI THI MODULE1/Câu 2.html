@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tryAddFromArray</title>
+</head>
+
+<body>
+    <script>
+        function inputLength() {
+            do { length = prompt("Input length of array") }
+            while (
+                (isNaN(length) || length < 0 || parseInt(length) < length)
+            )
+            return length;
+        }
+
+        function createArray(length) {
+            let arr = [];
+            for (i = 0; i < length; i++) {
+                arr[i] = prompt("Input element [" + i + "] of array");
+            }
+            return arr;
+        }
+
+        function inputIndex() {
+            let index = prompt("Input index");
+            return index;
+        }
+
+        function checkIndex(index) {
+            let checkIndex = true;
+            if (isNaN(index) || index < 0 || index > length - 1) {
+                checkIndex = false
+            }
+            return checkIndex;
+        }
+
+        function inputValue() {
+            value = prompt("Input a value")
+            return value;
+        }
+
+        function tryAddFromArray(arr, checkIndex, value) {
+            if (checkIndex) {
+                for (i = 0; i < arr.length; i++) {
+                    if (i == index) {
+                        for (j = arr.length; j >= i; j--) {
+                            arr[j] = arr[j - 1];
+                        }
+                        arr[index] = value;
+                    }
+                }
+            }
+        }
+        function main() {
+            length = inputLength();
+            arr = createArray(length);
+            document.write("Array before " + arr + "<br>");
+            index = inputIndex();
+            value = inputValue();
+            result = tryAddFromArray(arr, checkIndex, value);
+            document.write("Array after "+ arr);
+
+        }
+        main();
+
+
+    </script>
+</body>
+
+</html>

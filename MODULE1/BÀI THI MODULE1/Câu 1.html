@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>findMax</title>
+</head>
+
+<body>
+    <script>
+        function inputLength() {
+            do { length = prompt("Input length of array") }
+            while (
+                (isNaN(length) || length <= 0 || parseInt(length) < length)
+            )
+            return length;
+        }
+        function createrArray(length) {
+            let arr = [];
+            for (i = 0; i < length; i++) {
+
+                arr[i] = Math.floor(Math.random() * 100) + 1;
+            }
+        return arr;
+        }
+        function findMax(length, arr) {
+            let max = arr[0];
+            for (i = 0; i < length; i++) {
+                if (arr[i] > max) {
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+        function main() {
+            length = inputLength();
+            arr = createrArray(length);
+            document.write("Array is: " + arr + "<br>");
+            max = findMax(length, arr);
+            document.write("Max of array is " + max);
+        }
+        main();
+    </script>
+</body>
+
+</html>

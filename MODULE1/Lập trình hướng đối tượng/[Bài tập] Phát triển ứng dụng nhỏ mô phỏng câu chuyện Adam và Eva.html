@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let Apple = function (weight) {
+            this.weight = weight;
+            this.getWeight = function () {
+                return this.weight;
+            };
+            this.decrease = function () {
+                if (this.weight > 0) {
+                this.weight--;
+                }
+                else alert("hết táo để ăn rồi =)))")
+            };
+            this.isEmty = function() {
+                if (this.weight > 0) {
+                    return true;
+                }
+                else return false;
+            }
+        }
+        
+        let Human = function(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+            this.isMale = function() {
+                if (gender = true) {
+                    return true;
+                } 
+                else return false;
+            };
+            this.setGender = function(gender) {
+                this.gender = gender;
+            }
+            this.eat = function (Apple) {
+                Apple.decrease();
+                this.weight++;
+            };
+            this.say = function(say) {
+                console.log(say);
+            };
+            this.getName = function() {
+                return this.name;
+            };
+            this.setName = function(name) {
+                this.name = name;
+            };
+            this.getWeight = function() {
+                return this.weight;
+            };
+            this.setWeight = function(weight) {
+                this.weight = weight;
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

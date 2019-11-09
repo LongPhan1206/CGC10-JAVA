@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [];
+        let length = parseInt(prompt("Input length of array"));
+        for (i = 0; i < length; i++) {
+            arr[i] = +prompt("Input element [" + i + "] of array");
+        }
+        document.write("Array before " + arr + "<br>");
+        let num = parseInt(prompt("Enter the number"));
+        for (i = 0; i < length; i++) {
+            if (arr[i] == num) {
+                for (let j = i; j < length; j++) {
+                    arr[j] = arr[j + 1];
+                }
+                arr.pop();
+            }
+        }
+        document.write("Array after " + arr + "<br>");
+    </script>
+</body>
+
+</html>

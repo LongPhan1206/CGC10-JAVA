@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Rat {
+            constructor(name, weight, speed) {
+                this.name = name;
+                this.weight = weight;
+                this.speed = speed;
+            };
+            speak() {
+                return "chít chít";
+            };
+            live(weight) {
+                if (this.weight > 0) {
+                    console.log("Chuột còn sống");
+                }
+                else console.log("Chuột chết rồi :(((");
+            }
+        }
+
+
+
+        class Cat {
+            constructor(name, weight, speedMax) {
+                this.name = name;
+                this.weight = weight;
+                this.speedMax = speedMax;
+            }
+            speak() {
+                return "meo meo";
+            };
+            run(Rat) {
+                if (this.speedMax > Rat.speed) {
+                    console.log("Mày không thoát được đâu con trai")
+                }
+                else console.log("Mèo tuổi gì?:");
+            };
+            eat(Rat) {
+                    if (this.speedMax > Rat.speed && Rat.weight > 0) {
+                    console.log("RIP chuột");
+                    this.weight += Rat.weight;
+                    Rat.weight = 0;
+                }
+                else console.log("Tuổi hahaha");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

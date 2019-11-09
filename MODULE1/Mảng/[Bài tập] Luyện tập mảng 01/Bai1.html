@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr01 = [];
+        let arr02 = [];
+        let length = prompt("Input length of array ");
+        for (i = 0; i < length; i++) {
+
+            arr01[i] = Math.floor(Math.random() * 100);
+            if (arr01[i] > 10) {
+                arr02.push(arr01[i]);
+            }
+        }
+        document.write("<br>" + arr01);
+        document.write("<br>" + arr02);
+
+    </script>
+</body>
+
+</html>

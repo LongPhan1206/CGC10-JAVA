@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let radius = parseFloat(prompt("Input radius: "));
+        const pi = 3.14;
+        let area = 1;
+        let prer = 0;
+        function areaCircle(area, radius, pi) {
+            area = radius * radius * pi;
+            return area;
+        }
+        function prerCircle(prer, radius, pi) {
+            prer = radius * 2 * pi;
+            return prer;
+        }
+        areaCircle();
+        document.write("Area of circle is: " + area + "<br>");
+        prerCircle();
+        document.write("Prer of circle is: " + prer);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>isPerfectNumber</title>
+</head>
+
+<body>
+    <script>
+      function inputNumber() {
+          do {
+              num = prompt("Enter the number")
+          }
+          while (
+              isNaN(num) || num <= 1 || parseInt(num) < num
+          )
+          return num;
+      }
+      function isPerfectNumber(num) {
+          let sum = 0;
+          let perfectNumber = false;
+          for (i = 1; i <= num / 2; i++) {
+              if (num % i == 0) {
+                  sum += i;
+              }
+          }
+          if (sum == num) {
+              perfectNumber = true;
+          }
+          return perfectNumber;
+      }
+      function display(perfectNumber) {
+          if (perfectNumber) {
+              alert("TRUE")
+          }
+          else alert("FALSE");
+      }
+      function main() {
+          num = inputNumber();
+          perfectNumber = isPerfectNumber(num);
+          result = display(perfectNumber) ;
+      }
+        main();
+        
+    </script>
+</body>
+
+</html>

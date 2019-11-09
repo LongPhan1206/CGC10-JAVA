@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function findMin(a, b, c) {
+            let min;
+            if (a < b) {
+                if (a < c) {
+                    min = a;
+                }
+            }
+            else if (b < c) {
+                min = b;
+            }
+            else min = c;
+            return min;
+
+        }
+        function main() {
+            let a = +prompt("Input number a");
+            let b = +prompt("Input number b");
+            let c = +prompt("Input number c");
+            let min = findMin(a, b, c);
+            alert("Min = " + min)
+        }   
+        main();  
+    </script>
+</body>
+
+</html>

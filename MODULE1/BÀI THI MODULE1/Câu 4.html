@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Animal</title>
+</head>
+
+<body>
+    <img style="display:none" width="200" height="100" src="dog.jpg" alt="" id="imgcanvas" />
+    <canvas id="myCanvas" width="800px" height="400px" style="border: 1px solid red;"></canvas>
+    <script>
+        class Animal {
+            constructor(image, x, y, width, height) {
+                this.image = image;
+                this.x = x;
+                this.y = y;
+                this.width = width;
+                this.height = height;
+            }
+            render(canvas) {
+                canvas.drawImage(this.image, this.x, this.y, this.width, this.height);
+            }
+        }
+        let dog = new Image();
+        dog.src = document.getElementById("imgcanvas").src;
+        let canvas = document.getElementById("myCanvas").getContext("2d");
+        window.onload = function () {
+            let animal = new Animal(dog, 50, 50, 200, 100);
+            animal.render(canvas);
+        };
+    </script>
+</body>
+
+</html>

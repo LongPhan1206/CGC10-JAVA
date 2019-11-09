@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [];
+        function reverseArray() {
+            let length = +prompt("Input length of array");
+            for (i = 0; i < length; i++) {
+                arr[i] = prompt("Input element [" + i + "] of array");
+            }
+            document.write(arr + "<br>")
+            result = arr.reverse().join(", ");
+            return result;
+        }
+        reverseArray();
+        //document.write(arr + "<br>");
+        document.write(result);
+
+    </script>
+</body>
+
+</html>

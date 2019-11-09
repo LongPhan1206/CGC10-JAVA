@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [];
+        let length = parseInt(prompt("Input length of array"));
+        for (i = 0; i <= length; i++) {
+            arr[i] = Math.floor(Math.random() * 30);
+        }
+        document.write("Array is " + arr + "<br>");
+        let V = parseInt(prompt("Enter the number"));
+        let inArray = false;
+        for (i = 0; i < arr.length; i++) {
+            if (arr[i] == V) {
+                inArray = true;
+            }
+        }
+        if (inArray) {
+            document.write(V + " is in integer array");
+        }
+        else document.write(V + " not in integer array");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let inputVatly;
+    let inputHoahoc;
+    let inputSinhhoc;
+    inputVatly= prompt("Nhập điểm Vật lý: ");
+    inputHoahoc= prompt("Nhập diểm Hóa học: ");
+    inputSinhhoc= prompt("Nhập điểm Sinh học: ");
+    let Vatly= parseInt(inputVatly);
+    let Hoahoc= parseInt(inputHoahoc);
+    let Sinhhoc= parseInt(inputSinhhoc);
+    let DiemTB= (Vatly+Hoahoc+Sinhhoc)/3;
+    let Tongdiem= Vatly+Hoahoc+Sinhhoc;
+    document.write("Điểm trung bình môn là: "+ DiemTB);
+    document.write("<br/>")
+    document.write("Tổng điểm 3 môn là: "+ Tongdiem);
+    </script>
+</body>
+</html>

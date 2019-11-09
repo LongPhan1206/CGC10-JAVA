@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="500" height="500" style="border:1px solid #d3d3d3;"></canvas>
+    <script>
+        let Rectangle = function (height, width) {
+            this.height = height;
+            this.width = width;
+            this.getHeight = function () {
+                return height;
+            }
+            this.getWidth = function () {
+                return width;
+            }
+            this.getArea = function () {
+                return height * width;
+            }
+            this.getPeri = function () {
+                return (height + width) * 2;
+            }
+        }
+        function createRectangle() {
+            let height = +prompt("Input height");
+            let width = +prompt("Input width");
+            let rectangle = new Rectangle(height, width);
+            let area = rectangle.getArea();
+            let perimter = rectangle.getPeri();
+            rectangle.HCN;
+            document.write("Perimter is " + perimter + "<br>");
+            document.write("Area is " + area);
+            var ctx = document.getElementById("myCanvas").getContext('2d');
+            ctx.beginPath();
+            ctx.fillStyle = "#FF0000"
+            ctx.fillRect(100, 100, height, width);
+            ctx.stroke();
+        }
+        createRectangle();
+
+    </script>
+</body>
+
+</html>

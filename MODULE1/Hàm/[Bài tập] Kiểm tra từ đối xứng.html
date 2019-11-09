@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      function inputString() {
+            let  string = prompt("Input a string");
+            return string;
+        }
+        function checkPalidrome(string) {
+            let index = string.length - 1;
+            let count = 0;
+            let palidrome = false;
+            for (i = 0; i < index; i++) {
+                if (string[i] == string[index]) {
+                    index--; 
+                    count++;
+                }
+            }
+            if (string.length % 2 == 0) {
+                if (count == (string.length) / 2) {
+                    palidrome = true;
+                }
+            }
+            else {
+                if (count == (string.length - 1) /2) {
+                    palidrome = true;
+                }
+            }
+            return palidrome;
+        }
+        function display(palidrome) {
+            if (palidrome) {
+                alert("Palidrome")
+            }
+            else alert("not is palidrome")
+        }
+        function callFuncion() {
+            string = inputString();
+            palidrome = checkPalidrome(string);
+            result = display(palidrome);
+        }
+        callFuncion();
+    </script>
+</body>
+</html>
