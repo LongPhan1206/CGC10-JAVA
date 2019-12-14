@@ -3,7 +3,6 @@ package AbstrackAndInterface;
 import Inheritance.Shape.Circle;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 public class ComparableCircle extends Circle implements Comparable<ComparableCircle> {
     public ComparableCircle() {

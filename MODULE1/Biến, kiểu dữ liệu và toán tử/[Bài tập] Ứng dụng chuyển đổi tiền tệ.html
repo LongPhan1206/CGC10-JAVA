@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="input" type="number">
+
+    <select id="currency">
+        <option value="USD">USD</option>
+        <option value="VND">VND</option>
+    </select>
+
+    <button onclick="Convert()">Convert</button>
+
+    <div id="result"></div>
+
+    <script>
+
+        function Convert() {
+            let inputMoney = document.getElementById("input").value;
+            let money = document.getElementById("currency").value;
+            
+            if (money == "VND") {
+                convert = inputMoney / 23000;
+                document.getElementById("result").innerHTML = "USD = " + convert;
+            }
+            else if (money == "USD") {
+                convert = inputMoney * 23000;
+                document.getElementById("result").innerHTML = "VND = " + convert;
+
+            }
+        
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -10,16 +10,17 @@
 
 <body>
     <script>
-        do { let year = +prompt("Input year") }
+        do {var year = +prompt("Input year") }
         while (
             (isNaN(year) || year < 0)
         )
-        if (year % 100 === 0) {
+
+        if (year % 100 == 0) {
             if (year % 400 == 0) {
                 alert(year + " is a leap year");
             }
         }
-        else if (year % 4 === 0) {
+        else if (year % 4 == 0) {
             alert(year + " is a leap year");
         }
         else alert(year + " is not a leap year");
