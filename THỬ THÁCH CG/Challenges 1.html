@@ -18,16 +18,15 @@
             }
             return arr;
         }
+        
         function check(arr) {
-            //let arr2 = [];
             for (i = 0; i < arr.length; i++) {
                 if (arr[i].toString().length == 4) {
-                   // arr2.push(arr[i]);
                    document.write(arr[i] + ", "); 
                 }
             }
-           // return arr2;
         }
+
         function main() {
             let arr = createArr();
             check(arr);
